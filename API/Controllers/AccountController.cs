@@ -1,7 +1,9 @@
 ﻿using API.DTO;
 using API.Entity;
 using API.Extension;
+using API.Helpers;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +24,7 @@ namespace API.Controllers
             _signInManager = signInManager;
         }
 
+        [Authorize(Roles = RolesHelp.Admin)]
         [HttpPost("Register")]
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
@@ -38,7 +41,7 @@ namespace API.Controllers
 
             if (!result.Succeeded) return BadRequest(result.Errors);
 
-            var resultRole = await _userManager.AddToRoleAsync(user, "Moderator");
+            var resultRole = await _userManager.AddToRoleAsync(user, RolesHelp.Moderator);
 
             if (!resultRole.Succeeded) return BadRequest(resultRole.Errors);
 
@@ -62,9 +65,10 @@ namespace API.Controllers
                 Token = await _token.CreateTokenAsync(user)
             };
 
-            return /*user.ChangePassword ? Redirect("Somewhere") :*/ Ok(resultUser);
+            return user.ChangePassword ? Redirect("Somewhere") : Ok(resultUser);
         }
 
+        [Authorize]
         [HttpPost("ChangePassword")]
         public async Task<ActionResult<UserDto>> ChangePassword(ChangePasswordDto changePaswwordDto)
         {

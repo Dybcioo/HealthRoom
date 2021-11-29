@@ -1,4 +1,5 @@
 ﻿using API.Entity;
+using API.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -13,21 +14,15 @@ namespace API.Data
         {
             if (await userManager.Users.AnyAsync()) return;
 
-            var roles = new List<AppRole>()
+            foreach(var role in RolesHelp.GetAllRoles())
             {
-                new AppRole() { Name = "Admin"},
-                new AppRole() { Name = "Moderator"}
-            };
-
-            foreach(var role in roles)
-            {
-                await roleManager.CreateAsync(role); 
+                await roleManager.CreateAsync(new AppRole { Name = role}); 
             }
 
             var admin = new AppUser { UserName = "admin" };
 
             await userManager.CreateAsync(admin, "Admin@123");
-            await userManager.AddToRolesAsync(admin, new[] { "Admin", "Moderator" });
+            await userManager.AddToRolesAsync(admin, new[] { RolesHelp.Admin, RolesHelp.Moderator });
         }
     }
 }
