@@ -1,11 +1,10 @@
 ﻿using API.DTO;
 using API.Entity;
+using API.Extension;
 using API.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -24,18 +23,18 @@ namespace API.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult> Register(LoginDto loginDto)
+        public async Task<ActionResult> Register(RegisterDto registerDto)
         {
-            if (await _userManager.Users.AnyAsync(u => u.UserName == loginDto.Login.ToLower()))
+            if (await _userManager.Users.AnyAsync(u => u.UserName == registerDto.Login.ToLower()))
                 return BadRequest("Użytkownik zajęty");
 
             var user = new AppUser
             {
-                UserName = loginDto.Login.ToLower(),
+                UserName = registerDto.Login.ToLower(),
                 ChangePassword = true
             };
 
-            var result = await _userManager.CreateAsync(user, loginDto.Password);
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
 
             if (!result.Succeeded) return BadRequest(result.Errors);
 
@@ -67,13 +66,13 @@ namespace API.Controllers
         }
 
         [HttpPost("ChangePassword")]
-        public async Task<ActionResult<UserDto>> ChangePassword(LoginDto loginDto)
+        public async Task<ActionResult<UserDto>> ChangePassword(ChangePasswordDto changePaswwordDto)
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(u => loginDto.Login.ToLower() == u.UserName);
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => User.GetUsername().ToLower() == u.UserName);
 
             if (user == null) return Unauthorized("Nie ma takiego użytkownika");
 
-            var changeResult = await _userManager.ChangePasswordAsync(user, loginDto.Password, loginDto.NewPassword);
+            var changeResult = await _userManager.ChangePasswordAsync(user, changePaswwordDto.Password, changePaswwordDto.NewPassword);
 
             if (!changeResult.Succeeded) return BadRequest(changeResult.Errors);
 
