@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,5 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private router: Router,
-    private route: ActivatedRoute){}
 
-  onToAdmin(){
-    this.router.navigate(['admin'], {relativeTo: this.route});
-  }
 }
