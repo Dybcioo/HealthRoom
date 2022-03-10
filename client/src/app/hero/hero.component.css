@@ -1,0 +1,68 @@
+.hero-img-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spa-woman-female-enjoying-massage-in-spa-centre-royalty-free-image-492676582-1549988720.jpg");
+  height: 62rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1.1fr 0.5fr;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.hero-text-box {
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 2.5rem 2.5rem;
+  border-radius: 24px;
+
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.heading-primary {
+  line-height: 3rem;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+  color: #ececec;
+}
+
+.hero-description {
+  line-height: 1.8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: #f6f6f6;
+  margin-bottom: 5.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  background-color: #f6f6f6;
+  color: #087f5b;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1.6rem;
+  border-radius: 8px;
+
+  transition: background-color 500ms;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #087f5b;
+  color: #f6f6f6;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn:focus {
+  box-shadow: none;
+}
