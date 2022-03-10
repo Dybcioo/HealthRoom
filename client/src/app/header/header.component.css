@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* padding: 2.4rem 0 1.2rem 0; */
+}
+
+.hr {
+  border-bottom: 0.01rem rgb(255, 255, 255, 0.2) solid;
+}
+
+.logo {
+  margin: 0 0 0 2rem;
+}
+
+.main-nav {
+  margin: 0 3rem 0 0;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  padding: 3rem 0 1.5rem 0;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #ececec;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  padding: 1.8rem 0 2rem 0;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  border-bottom: 0.4rem #087f5b solid;
+  color: #d0d0d0;
+}
