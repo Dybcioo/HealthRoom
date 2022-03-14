@@ -6,8 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* padding: 2.4rem 0 1.2rem 0; */
 }
 
 .hr {
@@ -19,7 +17,7 @@
 }
 
 .main-nav {
-  margin: 0 3rem 0 0;
+  margin: 0 6rem 0 0;
 }
 
 .main-nav-list {
@@ -34,7 +32,7 @@
   text-decoration: none;
   color: #ececec;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1rem;
   transition: all 0.3s;
   padding: 1.8rem 0 2rem 0;
 }
