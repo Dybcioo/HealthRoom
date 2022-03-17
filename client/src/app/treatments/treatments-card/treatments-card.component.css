@@ -1,0 +1,133 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 45rem;
+  border: none;
+}
+
+.card-side {
+  height: 45rem;
+  transition: all 1.4s ease;
+
+  color: #fff;
+  font-size: 2.2rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(60, 60, 60, 0.2);
+}
+
+.card-side--front {
+  background-color: #fff;
+}
+
+.card-side--back {
+  background-image: linear-gradient(to right bottom, #52a58c, #218c6b);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-side--front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side--back {
+  transform: rotateY(0);
+}
+
+.card-photo {
+  background-size: cover;
+  height: 19rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  background-image: linear-gradient(to right bottom, #52a58c, #218c6b),
+    url("https://media.istockphoto.com/photos/female-therapist-manipulating-shoulder-blade-on-young-female-patient-picture-id698127146?k=20&m=698127146&s=612x612&w=0&h=26cMl4lIt5yav6ltpbH18vBeQtRld7qzn2rfBzFEsLs=");
+}
+
+.card-heading {
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  text-align: right;
+  color: #f6f6f6;
+  position: absolute;
+  top: 12rem;
+  right: 1.5rem;
+  width: 76%;
+}
+.card-heading-span {
+  padding: 0.4rem 1.2rem;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(82, 165, 140, 0.65),
+    rgb(33, 140, 107, 0.65)
+  );
+}
+
+.card-details {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.card-details ul {
+  color: #898989;
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.card-details ul li {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1.5rem;
+}
+
+.card-details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card-back {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 50%);
+  color: #f6f6f6;
+}
+
+.card-price-box {
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.card-price-text {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.card-price-value {
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.btn {
+  font-size: 2.2rem;
+  font-weight: 300rem;
+  background-color: #fff;
+  color: #343434;
+  border-radius: 120px;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 15%;
+}
