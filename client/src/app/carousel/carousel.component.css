@@ -1,0 +1,29 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 0.3fr 5fr 1fr 0.3fr;
+  grid-template-rows: 0.4fr 1fr 0.01fr;
+  gap: 2rem 0;
+
+  height: 65rem;
+}
+
+.item {
+  grid-column: 2;
+  grid-row: 2;
+
+  background-color: #087f5b;
+  border-radius: 3rem 0 0 3rem;
+}
+
+.right-side {
+  grid-column: 3;
+  grid-row: 2;
+
+  background-color: #087f5b;
+  border-radius: 0 3rem 3rem 0;
+}
+
+.menu {
+  height: 80%;
+  margin-top: 25%;
+}

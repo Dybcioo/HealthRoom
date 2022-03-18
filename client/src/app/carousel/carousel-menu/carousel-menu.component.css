@@ -1,0 +1,15 @@
+.container {
+  height: 100%;
+}
+
+.row {
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  border-left: 2px solid #eee;
+}
+
+.row:hover,
+.row:visited {
+  border-left: 2px solid red;
+  font-weight: 600;
+}

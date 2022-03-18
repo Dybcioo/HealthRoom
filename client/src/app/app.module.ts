@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { HeroMoreComponent } from './hero-more/hero-more.component';
 import { TreatmentsComponent } from './treatments/treatments.component';
 import { TreatmentsCardComponent } from './treatments/treatments-card/treatments-card.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselItemComponent } from './carousel/carousel-item/carousel-item.component';
+import { CarouselMenuComponent } from './carousel/carousel-menu/carousel-menu.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,13 @@ import { TreatmentsCardComponent } from './treatments/treatments-card/treatments
     HeaderComponent,
     HeroMoreComponent,
     TreatmentsComponent,
-    TreatmentsCardComponent
+    TreatmentsCardComponent,
+    CarouselComponent,
+    CarouselItemComponent,
+    CarouselMenuComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
