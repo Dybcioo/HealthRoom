@@ -10,14 +10,24 @@
 
 img {
   position: absolute;
-  padding-left: 4rem;
+  margin-left: 4rem;
 
-  top: -10%;
+  top: -5%;
   left: 0;
   width: 50%;
-  height: 120%;
+  height: 110%;
+
+  border-radius: 22px;
+
+  box-shadow: 0 1.5rem 4rem rgba(60, 60, 60, 0.2);
 }
 
-.descrition{
+.descrition {
+  position: absolute;
+  left: 58%;
+  right: 2%;
 
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+  color: #fff;
 }

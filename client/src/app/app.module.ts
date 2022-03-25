@@ -13,6 +13,7 @@ import { TreatmentsCardComponent } from './treatments/treatments-card/treatments
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item/carousel-item.component';
 import { CarouselMenuComponent } from './carousel/carousel-menu/carousel-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { CarouselMenuComponent } from './carousel/carousel-menu/carousel-menu.co
     CarouselItemComponent,
     CarouselMenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
