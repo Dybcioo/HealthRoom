@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, interval, Subscription } from 'rxjs';
 import { Card } from '../card';
 import { SwitcherService } from '../switcher.service';
 
@@ -29,13 +30,22 @@ export class CarouselMenuComponent implements OnInit {
     },
   ];
 
+  counter: number = 1;
+  carousel: Subscription;
+
   constructor(private switcher: SwitcherService) {}
 
   ngOnInit(): void {
-    this.Switch(0);
+    this.switcher.switch(this.cards[0]);
+    this.carousel = interval(5000).subscribe((x) => {
+      this.switcher.switch(this.cards[this.counter]);
+      if (this.counter >= 1) this.counter = 0;
+      else this.counter++;
+    });
   }
 
   Switch(id: number) {
     this.switcher.switch(this.cards[id]);
+    this.carousel.unsubscribe();
   }
 }

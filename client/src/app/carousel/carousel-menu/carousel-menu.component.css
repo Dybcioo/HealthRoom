@@ -13,3 +13,8 @@
   border-left: 2px solid red;
   font-weight: 600;
 }
+
+.active {
+  border-left: 2px solid black;
+  color: red;
+}
