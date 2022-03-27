@@ -30,7 +30,7 @@ export class CarouselMenuComponent implements OnInit {
     },
   ];
 
-  counter: number = 1;
+  counter: number = 0;
   carousel: Subscription;
 
   constructor(private switcher: SwitcherService) {}
@@ -38,13 +38,14 @@ export class CarouselMenuComponent implements OnInit {
   ngOnInit(): void {
     this.switcher.switch(this.cards[0]);
     this.carousel = interval(5000).subscribe((x) => {
-      this.switcher.switch(this.cards[this.counter]);
       if (this.counter >= 1) this.counter = 0;
       else this.counter++;
+      this.switcher.switch(this.cards[this.counter]);
     });
   }
 
   Switch(id: number) {
+    this.counter = id;
     this.switcher.switch(this.cards[id]);
     this.carousel.unsubscribe();
   }
