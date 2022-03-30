@@ -14,6 +14,11 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item/carousel-item.component';
 import { CarouselMenuComponent } from './carousel/carousel-menu/carousel-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,8 +33,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarouselComponent,
     CarouselItemComponent,
     CarouselMenuComponent,
+    ContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    NgxCaptchaModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
