@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { RecaptchaErrorParameters } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-contact',
@@ -9,11 +9,25 @@ import { RecaptchaErrorParameters } from 'ng-recaptcha';
 })
 export class ContactComponent implements OnInit {
   siteKey: string;
+  contactForm: FormGroup;
+
   constructor() {
     this.siteKey = '6LeOBywfAAAAANQUnnz-9k-ZnFSdNzrCty_V16O_';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contactForm = new FormGroup({
+      "name": new FormControl(null, Validators.required),
+      "tel": new FormControl(null, Validators.required),
+      "email": new FormControl(null, [Validators.required, Validators.email]),
+      "treatment": new FormControl(null),
+      "treatmentDate": new FormControl(null),
+      "message": new FormControl(null)
+    });
 
-  onSubmit() {}
+  }
+
+  onSubmit() {
+    console.log(this.contactForm);
+  }
 }

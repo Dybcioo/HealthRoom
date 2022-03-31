@@ -1,5 +1,5 @@
 <div class="contact">
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="contactForm"(ngSubmit)="onSubmit()">
     <div>
       <div class="form-group">
         <label for="name">Imie</label>
@@ -9,6 +9,7 @@
           formControlName="name"
           class="form-control"
         />
+        <span *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched">Proszę podać imię</span>
       </div>
       <div class="form-group">
         <label for="tel">Telefon komórkowy</label>
@@ -18,6 +19,7 @@
           formControlName="tel"
           class="form-control"
         />
+        <span *ngIf="!contactForm.get('tel').valid && contactForm.get('tel').touched">Proszę podać numer telefonu</span>
       </div>
       <div class="form-group">
         <label for="email">E-mail</label>
@@ -27,6 +29,7 @@
           formControlName="email"
           class="form-control"
         />
+        <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched">Proszę podać poprawny adres E-mail</span>
       </div>
       <div>
         <div class="form-group">
@@ -69,5 +72,6 @@
         </ngx-recaptcha2>
       </div>
     </div>
+    <button [disabled]="!contactForm.valid" type="submit">Wyślij</button>
   </form>
 </div>
