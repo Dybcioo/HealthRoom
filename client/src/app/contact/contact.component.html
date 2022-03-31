@@ -1,37 +1,89 @@
 <div class="contact">
-  <form [formGroup]="contactForm"(ngSubmit)="onSubmit()">
-    <div>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="header">
+      here are many variations of passages of Lorem Ipsum available, but the
+      majority have suffered alteration in some form, by injected humour, or
+      randomised words which don't look even slightly believable. If you are
+      going to use a passage of Lorem Ipsum, you need to be sure there isn't
+      anything embarrassing hidden in the middle of text.
+    </div>
+    <div class="left-form">
       <div class="form-group">
-        <label for="name">Imie</label>
+        <label for="name">Imie*</label>
         <input
           type="text"
           id="name"
           formControlName="name"
           class="form-control"
+          [ngClass]="
+            contactForm.get('name').touched
+              ? !contactForm.get('name').valid
+                ? 'invalidForm'
+                : 'validForm'
+              : ''
+          "
         />
-        <span *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched">Proszę podać imię</span>
+        <span
+          *ngIf="
+            !contactForm.get('name').valid && contactForm.get('name').touched
+          "
+          >Proszę podać imię</span
+        >
       </div>
       <div class="form-group">
-        <label for="tel">Telefon komórkowy</label>
+        <label for="tel">Telefon komórkowy*</label>
         <input
           type="text"
           id="tel"
           formControlName="tel"
           class="form-control"
+          [ngClass]="
+            contactForm.get('tel').touched
+              ? !contactForm.get('tel').valid
+                ? 'invalidForm'
+                : 'validForm'
+              : ''
+          "
         />
-        <span *ngIf="!contactForm.get('tel').valid && contactForm.get('tel').touched">Proszę podać numer telefonu</span>
+        <span
+          *ngIf="
+            !contactForm.get('tel').valid && contactForm.get('tel').touched
+          "
+          >Proszę podać numer telefonu</span
+        >
       </div>
       <div class="form-group">
-        <label for="email">E-mail</label>
+        <label for="email">E-mail*</label>
         <input
           type="text"
           id="email"
           formControlName="email"
           class="form-control"
+          [ngClass]="
+            contactForm.get('email').touched
+              ? !contactForm.get('email').valid
+                ? 'invalidForm'
+                : 'validForm'
+              : ''
+          "
         />
-        <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched">Proszę podać poprawny adres E-mail</span>
+        <span
+          *ngIf="
+            !contactForm.get('email').valid && contactForm.get('email').touched
+          "
+          >Proszę podać poprawny adres E-mail</span
+        >
       </div>
-      <div>
+    </div>
+    <div>
+      <div class="right-form">
+        <div class="description">
+          here are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered alteration in some form, by injected humour, or
+          randomised words which don't look even slightly believable. If you are
+          going to use a passage of Lorem Ipsum, you need to be sure there isn't
+          anything embarrassing hidden in the middle of text.
+        </div>
         <div class="form-group">
           <label for="treatment"
             >Proszę wybierz zabieg który Cię interesuje</label
@@ -42,6 +94,8 @@
             formControlName="treatment"
             class="form-control"
           >
+            <option>test</option>
+            <option selected>test</option>
             <option>test</option>
           </select>
         </div>
@@ -55,22 +109,24 @@
           />
         </div>
       </div>
-      <div>
+      <div class="form-group">
         <label for="message">Napisz w czym możemy Ci pomóc</label>
         <textarea
           id="message"
           formControlName="message"
           class="textArea"
+          rows="12"
+          placeholder="..."
         ></textarea>
       </div>
-      <div>
-        <ngx-recaptcha2
-          #captchaElem
-          [siteKey]="siteKey"
-          formControlName="recaptcha"
-        >
-        </ngx-recaptcha2>
-      </div>
+    </div>
+    <div>
+      <ngx-recaptcha2
+        #captchaElem
+        [siteKey]="siteKey"
+        formControlName="recaptcha"
+      >
+      </ngx-recaptcha2>
     </div>
     <button [disabled]="!contactForm.valid" type="submit">Wyślij</button>
   </form>
