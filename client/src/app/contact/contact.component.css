@@ -1,3 +1,5 @@
+@import '~ngx-toastr/toastr.css';
+
 .contact {
   margin-top: 15rem;
   margin-bottom: 15rem;
@@ -147,11 +149,6 @@ button[type="submit"] {
   grid-column: 1 / 3;
   z-index: 1;
   height: 60%;
-}
-
-.disable{
-  background-color: #EBEBE4 !important;
-  cursor: default !important;
 }
 
 button[type="submit"]:hover {

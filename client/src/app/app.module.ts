@@ -19,6 +19,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgxCaptchaModule,
     ReactiveFormsModule,
     FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -36,17 +36,12 @@ export class ContactComponent implements OnInit {
       return;
     }
     this.reCaptchaV3Service.execute(this.siteKey, 'homepage', (token) => {
-      this.tokenVisible = true;
+      //send message
+      this.toastr.success("Wiadomość wysłana pomyślnie. Dziękujemy za kontakt!");
     }, {
         useGlobalDomain: false
+    }, error => {
+      this.toastr.error("Upss.. ");
     });
-
-    if(this.tokenVisible){
-      this.toastr.success("Wiadomość wysłana pomyślnie. Dziękujemy za kontakt!");
-      console.log(this.contactForm);
-    }
-    else{
-
-    }
   }
 }
