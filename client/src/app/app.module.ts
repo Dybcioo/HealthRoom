@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarDirective } from './directives/navbar.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CarouselMenuComponent,
     ContactComponent,
     FooterComponent,
+    NavbarDirective,
   ],
   imports: [
     BrowserModule,
