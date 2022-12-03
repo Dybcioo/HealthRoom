@@ -1,0 +1,65 @@
+.content{
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    background-color: var(--main-bk-color-dark-8);
+}
+
+.additional-info{
+  letter-spacing: 0.3rem;
+  font-size: 0.8rem;
+}
+
+span{
+  padding: 1rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--third-bk-color);
+}
+
+p,
+a {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  list-style-type: none;
+  font-size: 5rem;
+}
+
+ul li {
+  padding: 1rem;
+}
+
+.fa-facebook,
+.fa-instagram
+{
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.fa-facebook:hover,
+.fa-facebook:focus {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+.fa-instagram:hover,
+.fa-instagram:focus {
+  color: #bd22a2;
+  transform: scale(1.1);
+}
+

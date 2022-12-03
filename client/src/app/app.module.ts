@@ -20,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
     CarouselItemComponent,
     CarouselMenuComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
