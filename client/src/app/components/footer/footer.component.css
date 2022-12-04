@@ -1,8 +1,11 @@
+.background{
+  background-color: var(--main-bk-color-dark-8);
+}
+
 .content{
     padding-top: 10rem;
     padding-bottom: 2rem;
     width: 100%;
-    background-color: var(--main-bk-color-dark-8);
 }
 
 .additional-info{

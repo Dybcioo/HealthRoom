@@ -1,11 +1,18 @@
 @import '~ngx-toastr/toastr.css';
 
+.background{
+  background-color: var(--main-bk-color-dark-8);
+}
+
 .contact {
   margin-top: 15rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  width: 100%;
   background-color: var(--main-bk-color);
+  margin: 0 auto;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
@@ -176,4 +183,19 @@ select option {
 .captcha-info a{
   text-decoration: none;
   color: #1476c1;
+}
+
+.footer{
+  margin-top: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  z-index: 1;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
 }

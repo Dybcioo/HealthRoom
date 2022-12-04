@@ -23,6 +23,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarDirective } from './directives/navbar.directive';
+import { FooterDirective } from './directives/footer.directive';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NavbarDirective } from './directives/navbar.directive';
     ContactComponent,
     FooterComponent,
     NavbarDirective,
+    FooterDirective,
   ],
   imports: [
     BrowserModule,
