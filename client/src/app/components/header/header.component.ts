@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrollToService: ScrollToService) { }
 
   ngOnInit(): void {
   }
 
   onNavigate(section: string){
-    console.log(section)
-    document.getElementsByTagName(section)[0].scrollIntoView({behavior: 'smooth'});
+
+    const config: ScrollToConfigOptions = {
+      target: section
+    };
+
+    this.scrollToService.scrollTo(config);
+    //document.getElementsByTagName(section)[0].scrollIntoView({behavior: 'smooth'});
   }
 }

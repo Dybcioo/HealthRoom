@@ -24,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarDirective } from './directives/navbar.directive';
 import { FooterDirective } from './directives/footer.directive';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { FooterDirective } from './directives/footer.directive';
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
