@@ -22,7 +22,6 @@ export class FooterDirective {
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
 
     if(window.pageYOffset >= document.body.scrollHeight - 1000 && this.flag){
-      console.log("test in")
       this.renderer2.setAttribute(this.contact, "class", "footer")
 
       const factoryContact = this.builder.build(this.contactIn());
@@ -36,7 +35,6 @@ export class FooterDirective {
       this.flag2 = true;
 
     }else if(window.pageYOffset < document.body.scrollHeight - 1000 && this.flag2){
-      console.log("test out")
       this.renderer2.setAttribute(this.contact, "class", "contact")
 
       const factoryContact = this.builder.build(this.contactOut());
