@@ -23,12 +23,21 @@
   
 }
 
-.hr {
-  border-bottom: 1px rgb(255, 255, 255, 0.2) solid;
+.logo{
+  position: absolute;
+  height: 130px;
+  padding-left: 4rem;
 }
 
-.logo {
-  margin: 0 0 0 2rem;
+.logo-sticky{
+  height: 80px;
+  padding-left: 4rem;
+  padding-top: 0.8rem;
+  cursor: pointer;
+}
+
+.hr {
+  border-bottom: 1px rgb(255, 255, 255, 0.2) solid;
 }
 
 .main-nav {

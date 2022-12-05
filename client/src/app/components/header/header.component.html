@@ -1,5 +1,7 @@
 <header appNavbar class="header">
-  <p class="logo">LOGO</p>
+  <div>
+    <img id="logo" (click)="onNavigate('app-hero')" class="logo" src="../../../assets/logo.png">
+  </div>
   <nav class="main-nav">
     <ul class="main-nav-list">
       <li><p class="main-nav-item" (click)="onNavigate('app-hero')">Section 1</p></li>

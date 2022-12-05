@@ -14,16 +14,22 @@ export class NavbarDirective {
     return document.getElementById("navInvisible").offsetHeight;
   }
 
+  get logo(){
+    return document.getElementById("logo");
+  }
+
   flag = true;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
     if(window.pageYOffset >= this.invisibleHeight && this.flag){
       this.renderer2.setAttribute(this.elementRef.nativeElement, "class", "sticky");
+      this.renderer2.setAttribute(this.logo, "class", "logo-sticky");
       const factoryContact = this.builder.build(this.fadeIn());
       factoryContact.create(this.elementRef.nativeElement).play();
       this.flag = false;
     }else if(window.pageYOffset < this.invisibleHeight){
       this.renderer2.setAttribute(this.elementRef.nativeElement, "class", "header");
+      this.renderer2.setAttribute(this.logo, "class", "logo");
       this.flag = true;
     }
   } 
