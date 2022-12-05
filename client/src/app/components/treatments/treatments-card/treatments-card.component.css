@@ -2,12 +2,12 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 45rem;
+  height: 40rem;
   border: none;
 }
 
 .card-side {
-  height: 45rem;
+  height: 40rem;
   transition: all 1.4s ease;
 
   color: #fff;
@@ -43,7 +43,7 @@
 
 .card-photo {
   background-size: cover;
-  height: 19rem;
+  height: 18rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -74,7 +74,7 @@
 }
 
 .card-details {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 100%;
 }
 
@@ -90,7 +90,7 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: 400;
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
 
 .card-details ul li:not(:last-child) {
@@ -122,6 +122,7 @@
 }
 
 .btn {
+  text-decoration: none;
   font-size: 2.2rem;
   font-weight: 300rem;
   background-color: #fff;
