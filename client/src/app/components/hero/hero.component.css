@@ -70,22 +70,18 @@
 }
 
 
+/* Media queries */
+
+@media (max-width: 94em){
+  .hero-img-box {
+    grid-template-columns: 1.4fr 1.3fr 0.3fr;
+  }
+
+}
+
 @media (max-width: 84rem) {
 
   .hero-img-box {
-    height: 48rem;
-    grid-template-rows: 0.5fr 2fr 1fr;
-  }
-
-  .heading-primary {
-    font-size: 2rem;
-    line-height: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    margin-bottom: 4.2rem;
+    grid-template-columns: 0.5fr 1.3fr 0.3fr;
   }
 }

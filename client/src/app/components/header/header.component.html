@@ -1,4 +1,4 @@
-<header appNavbar class="header">
+<header appNavbar class="header" [ngClass]="barsOpen ? 'nav-open' : ''">
   <div>
     <img id="logo" (click)="onNavigate('app-hero')" class="logo" src="../../../assets/logo.png">
   </div>
@@ -12,4 +12,8 @@
       <li><p class="main-nav-item" (click)="onNavigate('app-footer')">Section 6</p></li>
     </ul>
   </nav>
+  <button class="btn-mobile-nav" (click)="onShowMenu()">
+    <fa-icon class="icon-mobile-nav" id="bars" [icon]="faBars"></fa-icon>
+    <fa-icon class="icon-mobile-nav" id="exit" [icon]="exit"></fa-icon>
+  </button>
 </header>

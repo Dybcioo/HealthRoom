@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
@@ -7,7 +8,10 @@ import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scrol
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  faBars = faBars;
+  exit = faXmark;
+  barsOpen = false;
+  
   constructor(private scrollToService: ScrollToService) { }
 
   ngOnInit(): void {
@@ -20,6 +24,10 @@ export class HeaderComponent implements OnInit {
     };
 
     this.scrollToService.scrollTo(config);
-    //document.getElementsByTagName(section)[0].scrollIntoView({behavior: 'smooth'});
+    this.barsOpen = false;
+  }
+
+  onShowMenu(){
+    this.barsOpen = !this.barsOpen;
   }
 }

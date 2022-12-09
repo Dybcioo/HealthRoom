@@ -11,7 +11,7 @@ export class NavbarDirective {
     private builder: AnimationBuilder) {}
 
   get invisibleHeight(){
-    return document.getElementById("navInvisible").offsetHeight;
+    return document.getElementById("navInvisible").offsetHeight - 10;
   }
 
   get logo(){
