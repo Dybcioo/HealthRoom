@@ -29,8 +29,8 @@ import { SwitcherService } from '../switcher.service';
           opacity: '1',
         })
       ),
-      transition('* => right', animate('400ms ease')),
-      transition('* => left', animate('700ms ease')),
+      transition('* => right', animate('800ms ease')),
+      transition('* => left', animate('1000ms ease')),
     ]),
   ],
 })

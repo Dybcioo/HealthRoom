@@ -29,5 +29,5 @@ img {
 
   line-height: 2.5rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--fourth-bk-color-light-9);
 }

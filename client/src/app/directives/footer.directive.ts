@@ -65,14 +65,14 @@ export class FooterDirective {
   private contactIn(): AnimationMetadata[] {
     return [
       style({ width: "100%"}),
-      animate('800ms ease-in', style({ width: "95%", backgroundColor: 'var(--main-bk-color-dark-1)' })),
+      animate('800ms ease-in', style({ width: "95%", background: 'linear-gradient(to left top, var(--main-bk-color-dark-4), var(--main-bk-color-light-1))' })),
     ];
   }
 
   private contactOut(): AnimationMetadata[] {
     return [
       style({ width: '*' }),
-      animate('1200ms ease-in', style({ width: "100%", backgroundColor: 'var(--main-bk-color)' })),
+      animate('1200ms ease-in', style({ width: "100%", background: 'linear-gradient(to left top, var(--main-bk-color-dark-3), var(--main-bk-color-light-1))' })),
     ];
   }
 }

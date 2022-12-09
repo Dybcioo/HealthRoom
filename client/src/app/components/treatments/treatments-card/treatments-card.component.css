@@ -29,7 +29,7 @@
 }
 
 .card-side--back {
-  background-image: linear-gradient(to right bottom, #52a58c, #218c6b);
+  background-image: linear-gradient(to left top, var(--main-bk-color-dark-3), var(--main-bk-color-light-1));
   transform: rotateY(-180deg);
 }
 
@@ -47,7 +47,7 @@
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-  background-image: linear-gradient(to right bottom, #52a58c, #218c6b),
+  background-image: linear-gradient(to left top, var(--main-bk-color-dark-3), var(--main-bk-color-light-1)),
     url("https://media.istockphoto.com/photos/female-therapist-manipulating-shoulder-blade-on-young-female-patient-picture-id698127146?k=20&m=698127146&s=612x612&w=0&h=26cMl4lIt5yav6ltpbH18vBeQtRld7qzn2rfBzFEsLs=");
 }
 
@@ -126,9 +126,14 @@
   font-size: 2.2rem;
   font-weight: 300rem;
   background-color: #fff;
-  color: #343434;
+  color: var(--third-bk-color-dark-3);
   border-radius: 120px;
   padding: 1rem 2rem;
   position: absolute;
   left: 15%;
+}
+
+.btn:hover{
+  background-color: var(--third-bk-color-dark-3);
+  color: #fff;
 }

@@ -61,7 +61,7 @@
 
 .main-nav-item:hover,
 .main-nav-item:active {
-  box-shadow:0px -3px 0px 0px var(--third-bk-color-light-5) inset;
+  box-shadow:0px -1px 0px 0px #000 inset;
   transition: box-shadow 0.3s linear;
-  color: var(--main-bk-color-dark-7);
+  color: var(--third-bk-color-dark-3);
 }
