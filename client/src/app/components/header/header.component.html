@@ -4,15 +4,13 @@
   </div>
   <nav class="main-nav">
     <ul class="main-nav-list">
-      <li><p class="main-nav-item" (click)="onNavigate('app-hero')">Section 1</p></li>
-      <li><p class="main-nav-item" (click)="onNavigate('app-hero-more')">Section 2</p></li>
-      <li><p class="main-nav-item" (click)="onNavigate('app-treatments')">Section 3</p></li>
-      <li><p class="main-nav-item" (click)="onNavigate('app-carousel')">Section 4</p></li>
-      <li><p class="main-nav-item" (click)="onNavigate('app-contact')">Section 5</p></li>
-      <li><p class="main-nav-item" (click)="onNavigate('app-footer')">Section 6</p></li>
+      <li><p class="main-nav-item" (click)="onNavigate('app-hero-more')">O mnie</p></li>
+      <li><p class="main-nav-item" (click)="onNavigate('app-treatments')">Najczęściej wybierane</p></li>
+      <li><p class="main-nav-item" (click)="onNavigate('app-carousel')">Zabiegi</p></li>
+      <li><p class="main-nav-item" (click)="onNavigate('app-contact')">Kontakt</p></li>
     </ul>
   </nav>
-  <button class="btn-mobile-nav" (click)="onShowMenu()">
+  <button id="btn-mobile-nav" class="btn-mobile-nav" (click)="onShowMenu()">
     <fa-icon class="icon-mobile-nav" id="bars" [icon]="faBars"></fa-icon>
     <fa-icon class="icon-mobile-nav" id="exit" [icon]="exit"></fa-icon>
   </button>

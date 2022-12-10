@@ -1,7 +1,7 @@
 .hero-img-box {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spa-woman-female-enjoying-massage-in-spa-centre-royalty-free-image-492676582-1549988720.jpg");
-  height: 62rem;
+  height: 101vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,21 +23,21 @@
 }
 
 .heading-primary {
-  line-height: 3rem;
+  line-height: 5vh;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 3vw;
   letter-spacing: 0.1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3vh;
   color: #ececec;
 }
 
 .hero-description {
-  line-height: 1.8rem;
+  line-height: 3vh;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1vw;
   letter-spacing: 0.1rem;
   color: #f6f6f6;
-  margin-bottom: 5.2rem;
+  margin-bottom: 5vh;
 }
 
 .btn:link,
@@ -47,7 +47,7 @@
   background-color: #f6f6f6;
   color: var(--third-bk-color-dark-3);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-weight: 600;
   padding: 0.5rem 1.6rem;
   border-radius: 8px;
@@ -72,16 +72,10 @@
 
 /* Media queries */
 
-@media (max-width: 94em){
-  .hero-img-box {
-    grid-template-columns: 1.4fr 1.3fr 0.3fr;
-  }
-
-}
-
-@media (max-width: 84rem) {
+@media (max-width: 75rem) {
 
   .hero-img-box {
-    grid-template-columns: 0.5fr 1.3fr 0.3fr;
+    grid-template-columns: 1.6fr 1.3fr 0.3fr;
+    grid-template-rows: 2.5fr 2.5fr 1.5fr;
   }
 }

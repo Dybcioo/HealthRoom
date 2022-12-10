@@ -11,11 +11,15 @@ export class NavbarDirective {
     private builder: AnimationBuilder) {}
 
   get invisibleHeight(){
-    return document.getElementById("navInvisible").offsetHeight - 10;
+    return document.getElementById("navInvisible").offsetHeight - 5;
   }
 
   get logo(){
     return document.getElementById("logo");
+  }
+
+  get btnMobile(){
+    return document.getElementById("btn-mobile-nav");
   }
 
   flag = true;
@@ -24,12 +28,14 @@ export class NavbarDirective {
     if(window.pageYOffset >= this.invisibleHeight && this.flag){
       this.renderer2.setAttribute(this.elementRef.nativeElement, "class", "sticky");
       this.renderer2.setAttribute(this.logo, "class", "logo-sticky");
+      this.renderer2.setAttribute(this.btnMobile, "class", "btn-mobile-nav-sticky");
       const factoryContact = this.builder.build(this.fadeIn());
       factoryContact.create(this.elementRef.nativeElement).play();
       this.flag = false;
     }else if(window.pageYOffset < this.invisibleHeight){
       this.renderer2.setAttribute(this.elementRef.nativeElement, "class", "header");
       this.renderer2.setAttribute(this.logo, "class", "logo");
+      this.renderer2.setAttribute(this.btnMobile, "class", "btn-mobile-nav");
       this.flag = true;
     }
   } 
