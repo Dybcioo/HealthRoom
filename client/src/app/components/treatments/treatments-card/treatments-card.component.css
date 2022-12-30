@@ -2,16 +2,16 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 40rem;
+  height: 80vh;
   border: none;
 }
 
 .card-side {
-  height: 40rem;
+  height: 80vh;
   transition: all 1.4s ease;
 
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2.2vw;
 
   position: absolute;
   top: 0;
@@ -43,7 +43,7 @@
 
 .card-photo {
   background-size: cover;
-  height: 18rem;
+  height: 35vh;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -52,14 +52,14 @@
 }
 
 .card-heading {
-  font-size: 2.2rem;
+  font-size: 2.2vw;
   font-weight: 300;
-  line-height: 3.2rem;
+  line-height: 6.5vh;
   text-transform: uppercase;
   text-align: right;
   color: #f6f6f6;
   position: absolute;
-  top: 12rem;
+  top: 20vh;
   right: 1.5rem;
   width: 76%;
 }
@@ -74,7 +74,7 @@
 }
 
 .card-details {
-  margin-top: 1.5rem;
+  margin-top: 1.5vh;
   width: 100%;
 }
 
@@ -88,9 +88,9 @@
 
 .card-details ul li {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   font-weight: 400;
-  padding: 1.3rem;
+  padding: 2.4vh;
 }
 
 .card-details ul li:not(:last-child) {
@@ -107,33 +107,94 @@
 
 .card-price-box {
   text-align: center;
-  margin-bottom: 9rem;
+  margin-bottom: 9vh;
 }
 
 .card-price-text {
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 2vh;
 }
 
 .card-price-value {
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: 100;
 }
 
 .btn {
   text-decoration: none;
-  font-size: 2.2rem;
-  font-weight: 300rem;
+  font-size: 2.2vw;
+  font-weight: 300;
   background-color: #fff;
   color: var(--third-bk-color-dark-3);
   border-radius: 120px;
   padding: 1rem 2rem;
   position: absolute;
-  left: 15%;
+  left: 1vw;
+  top: 30vh;
 }
 
 .btn:hover{
   background-color: var(--third-bk-color-dark-3);
   color: #fff;
+}
+
+@media (max-width: 62em) {
+  .card {
+    height: 55vh;
+  }
+  
+  .card-side {
+    height: 55vh;
+    font-size: 2.2vw;
+  }
+
+  .card-photo {
+    height: 25vh;
+  }
+  
+  .card-heading {
+    font-size: 3.6vw;
+    line-height: 4.5vh;
+    top: 18vh;
+    right: 0.5rem;
+    width: 65%;
+  }
+
+  .card-details {
+    margin-top: 2.5vh;
+  }
+
+  .card-details ul li {
+    font-size: 2.5vw;
+    padding: 1.5vh;
+  }
+
+  .card-back {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 50%);
+    color: #f6f6f6;
+  }
+  
+  .card-price-box {
+    margin-bottom: 9vh;
+  }
+  
+  .card-price-text {
+    font-size: 4.4vw;
+    margin-bottom: 2vh;
+  }
+  
+  .card-price-value {
+    font-size: 13vw;
+  }
+  
+  .btn {
+    font-size: 4.2vw;
+    left: 5vw;
+    top: 20vh;
+    padding: 1rem 1rem;
+  }
 }
