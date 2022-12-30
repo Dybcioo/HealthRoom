@@ -37,7 +37,7 @@ export class CarouselMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.switcher.switch(this.cards[0]);
-    this.carousel = interval(5000).subscribe((x) => {
+    this.carousel = interval(10000).subscribe((x) => {
       if (this.counter >= 1) this.counter = 0;
       else this.counter++;
       this.switcher.switch(this.cards[this.counter]);

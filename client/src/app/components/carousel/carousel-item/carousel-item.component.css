@@ -24,10 +24,59 @@ img {
 
 .descrition {
   position: absolute;
-  left: 58%;
+  left: 45vw;
   right: 2%;
 
-  line-height: 2.5rem;
-  font-size: 1.6rem;
+  line-height: 4vh;
+  font-size: 1.6vw;
   color: var(--fourth-bk-color-light-9);
+}
+
+/* Media queries */
+@media (max-width: 62em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  
+    height: 100%;
+    width: 100%;
+  
+    align-items: center;
+    position: relative;
+  }
+  
+  img {
+    position: absolute;
+  
+    top: 0%;
+    left: 20vw;
+    width: 50%;
+    height: 55%;
+    margin: 0 auto;
+    font-weight: 300;
+  
+    border-radius: 22px;
+  
+    box-shadow: 0 1.5rem 4rem rgba(60, 60, 60, 0.2);
+  }
+  
+  .descrition {
+    position: absolute;
+    left: 0;
+    top: 45vh;
+
+    width: 90%;
+    margin: 0 auto;
+  
+    letter-spacing: 0.1rem;
+    line-height: 3vh;
+    font-size: 3vw;
+  }
+
+  @media (max-width: 29em) {
+    .descrition {
+      line-height: 2.2vh;
+      font-size: 3vw;
+    }
+  }
 }
