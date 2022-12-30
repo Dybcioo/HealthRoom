@@ -39,6 +39,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 4rem;
+  z-index: 1;
 }
 
 .right-form{
@@ -171,6 +172,7 @@ select option {
 .message{
   grid-column: 1 / 2;
   margin-bottom: 8rem;
+  z-index: 1;
 }
 
 .captcha-info{
@@ -198,4 +200,60 @@ select option {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
+}
+
+/* Media queries */
+@media (max-width: 86em) {
+  .draw{
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 86em) {
+  form {
+    grid-template-columns: none;
+  }
+
+  .draw{
+    position: absolute;
+    left: 20%;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 86em) {
+  .draw{
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 41em) {
+
+  .form{
+    grid-template-columns: none;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+
+  .right-form{
+    grid-column: unset;
+  }
+
+  .message{
+    grid-column: 1;
+  }
+
+  .header {
+    grid-column: 1;
+  }
+
+  .draw{
+    left: 2%;
+    width: 100%;
+    grid-column: unset;
+  }
 }
