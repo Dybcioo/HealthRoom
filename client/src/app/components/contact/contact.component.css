@@ -218,6 +218,8 @@ select option {
     position: absolute;
     left: 20%;
     opacity: 0.5;
+    width: 80%;
+    overflow: hidden;
   }
 }
 
@@ -253,7 +255,8 @@ select option {
 
   .draw{
     left: 2%;
-    width: 100%;
+    width: 98%;
+    overflow: hidden;
     grid-column: unset;
   }
 }
