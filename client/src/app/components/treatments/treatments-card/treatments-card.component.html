@@ -1,5 +1,5 @@
-<div class="card">
-  <div class="card-side card-side--front">
+<div class="card" (touchstart)="rotate()">
+  <div #cardfront class="card-side card-side--front">
     <div class="card-photo"></div>
     <div class="card-heading">
       <span class="card-heading-span">Bowtech therapy</span>
@@ -14,7 +14,7 @@
       </ul>
     </div>
   </div>
-  <div class="card-side card-side--back">
+  <div #cardback class="card-side card-side--back">
     <div class="card-back">
       <div class="card-price-box">
         <div class="card-price-text">Tylko</div>

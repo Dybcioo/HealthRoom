@@ -26,6 +26,8 @@ import { NavbarDirective } from './directives/navbar.directive';
 import { FooterDirective } from './directives/footer.directive';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     FormsModule,
     ToastrModule.forRoot(),
     FontAwesomeModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent],

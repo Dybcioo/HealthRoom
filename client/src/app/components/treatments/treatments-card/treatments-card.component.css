@@ -140,6 +140,15 @@
 }
 
 @media (max-width: 62em) {
+
+  .card:hover .card-side--front {
+    transform: none;
+  }
+  
+  .card:hover .card-side--back {
+    transform: none;
+  }
+
   .card {
     height: 55vh;
   }
