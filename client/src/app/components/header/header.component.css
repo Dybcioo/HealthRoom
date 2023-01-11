@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
 
-  overflow-x: clip;
+  overflow-x: unset;
 }
 
 .sticky{
@@ -88,6 +88,11 @@
 
 #exit{
   display: none;
+  font-size: 2rem;
+}
+
+#bars{
+  font-size: 2rem;
 }
 
 .btn-mobile-nav-sticky{
@@ -164,6 +169,7 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    width: 0;
   }
 
   .main-nav-list {
@@ -180,6 +186,7 @@
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    width: 100%;
     transform: translateX(0);
   }
   
@@ -208,11 +215,11 @@
   }
 
   .btn-mobile-nav{
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   .btn-mobile-nav-sticky{
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   .logo-sticky{
