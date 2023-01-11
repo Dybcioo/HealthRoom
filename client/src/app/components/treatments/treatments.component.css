@@ -29,27 +29,31 @@
 /* Media queries */
 @media (max-width: 62em) {
   .content{
-    grid-template-rows: 0.2fr 1fr 0.1fr;
+    grid-template-rows: none;
     height: 100%;
   }
 
   .row {
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
   }
 
   .col-1-of-3 {
     grid-column: 2;
     grid-row: 1;
+    margin: 4rem 2rem;
   }
   
   .col-2-of-3 {
     grid-column: 2;
     grid-row: 2;
+    margin: 4rem 2rem;
   }
   
   .col-3-of-3 {
     grid-column: 2;
     grid-row: 3;
+    margin: 4rem 2rem;
   }
 }

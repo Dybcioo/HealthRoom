@@ -29,15 +29,16 @@
   .row {
     flex-grow: 1;
     color: var(--fourth-bk-color-light-9);
-    font-size: 3vw;
+    font-size: 3.5vw;
     padding: 0;
-    padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid var(--third-bk-color-light-9);
     border-left: none;
     text-align: center;
     align-self: center;
     letter-spacing: -0.05rem;
+    font-weight: 400;
   }
 
   .row:first-child{

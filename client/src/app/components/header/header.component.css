@@ -179,7 +179,7 @@
   }
 
   .main-nav-item{
-    font-size: 3vw;
+    font-size: 6vw;
   }
 
   .nav-open .main-nav{
@@ -210,8 +210,8 @@
 @media (max-width: 29em) {
   .logo{
     padding-left: 1rem;
-    height: 8vh;
-    width: 40vw;
+    height: 12vh;
+    width: 45vw;
   }
 
   .btn-mobile-nav{

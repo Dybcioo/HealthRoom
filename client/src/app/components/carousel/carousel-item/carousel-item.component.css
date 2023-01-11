@@ -49,8 +49,8 @@ img {
     position: absolute;
   
     top: 0%;
-    left: 20vw;
-    width: 50%;
+    left: 12vw;
+    width: 70%;
     height: 55%;
     margin: 0 auto;
     font-weight: 300;
@@ -63,7 +63,7 @@ img {
   .descrition {
     position: absolute;
     left: 0;
-    top: 45vh;
+    top: 65vh;
 
     width: 90%;
     margin: 0 auto;
@@ -71,12 +71,5 @@ img {
     letter-spacing: 0.1rem;
     line-height: 3vh;
     font-size: 3vw;
-  }
-
-  @media (max-width: 29em) {
-    .descrition {
-      line-height: 2.2vh;
-      font-size: 3vw;
-    }
   }
 }

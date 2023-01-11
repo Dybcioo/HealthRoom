@@ -102,18 +102,18 @@ img {
   }
 
   img{
-    height: 50vw;
-    width: 30vw;
+    height: 60vw;
+    width: 40vw;
   }
 
   .heading {
     line-height: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
   .description {
-    font-size: 0.7rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 }
