@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, interval, Subscription } from 'rxjs';
-import { Card } from '../card';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
+import { Card, Swipe } from '../card';
 import { SwitcherService } from '../switcher.service';
 
 @Component({
@@ -28,25 +28,101 @@ export class CarouselMenuComponent implements OnInit {
         'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
       description: `Elooo`,
     },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
+    {
+      id: 1,
+      image:
+        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+      description: `Elooo`,
+    },
   ];
 
+  @Input() swipe: EventEmitter<number>;
   counter: number = 0;
   carousel: Subscription;
+  swipeModel: Swipe;
 
   constructor(private switcher: SwitcherService) {}
 
   ngOnInit(): void {
-    this.switcher.switch(this.cards[0]);
+    this.swipeModel = {card: this.cards[0], directionName: 'right'};
+    this.switcher.switch(this.swipeModel);
     this.carousel = interval(10000).subscribe((x) => {
-      if (this.counter >= 1) this.counter = 0;
+      if (this.counter >= 10) this.counter = 0;
       else this.counter++;
-      this.switcher.switch(this.cards[this.counter]);
+      this.swipeModel.card = this.cards[this.counter];
+      this.switcher.switch(this.swipeModel);
     });
+
+    this.swipe.subscribe(swipeId => {
+      if(swipeId > 0){
+        this.swipeModel.directionName = 'right'
+      }else{
+        this.swipeModel.directionName = 'left'
+      }
+      this.Switch(this.counter + swipeId);
+    })
   }
 
   Switch(id: number) {
     this.counter = id;
-    this.switcher.switch(this.cards[id]);
+    if (this.counter >= 10) this.counter = 0;
+    if (this.counter < 0) this.counter = 10;
+    this.swipeModel.card = this.cards[this.counter];
+    this.switcher.switch(this.swipeModel);
     this.carousel.unsubscribe();
   }
 }

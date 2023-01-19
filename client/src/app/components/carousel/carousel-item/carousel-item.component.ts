@@ -5,8 +5,8 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../card';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Card, Swipe } from '../card';
 import { SwitcherService } from '../switcher.service';
 
 @Component({
@@ -23,26 +23,34 @@ import { SwitcherService } from '../switcher.service';
         })
       ),
       state(
-        'left',
+        'center',
         style({
           transform: 'translate(0%)',
           opacity: '1',
         })
       ),
-      transition('* => right', animate('1300ms ease')),
-      transition('* => left', animate('2000ms ease')),
+      state(
+        'left',
+        style({
+          transform: 'translate(100%)',
+          opacity: '0',
+        })
+      ),
+      transition('center => right', animate('600ms ease')),
+      transition('* => center', animate('1000ms ease')),
+      transition('center => left', animate('600ms ease')),
     ]),
   ],
 })
-export class CarouselItemComponent implements OnInit {
+export class CarouselItemComponent implements OnInit{
   card: Card;
   position: string;
   cardTemp: Card;
 
   constructor(private switcher: SwitcherService) {
-    this.switcher.activeCard.subscribe((card: Card) => {
-      this.position = 'right';
-      this.cardTemp = card;
+    this.switcher.activeCard.subscribe((swipe: Swipe) => {
+      this.position = swipe.directionName;
+      this.cardTemp = swipe.card;
     });
   }
 
@@ -50,6 +58,6 @@ export class CarouselItemComponent implements OnInit {
 
   onDone($event) {
     this.card = this.cardTemp;
-    this.position = 'left';
+    this.position = 'center';
   }
 }

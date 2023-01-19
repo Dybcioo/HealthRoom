@@ -1,8 +1,24 @@
 <div class="container">
-  <div class="row" [ngClass]="{'active' : counter == 0}" (click)="Switch(0)">eloszka</div>
-  <div class="row" [ngClass]="{'active' : counter == 1}" (click)="Switch(1)">eloszka</div>
-  <div class="row">eloszka</div>
-  <div class="row">eloszka</div>
-  <div class="row">eloszka</div>
-  <div class="row">eloszka</div>
+  <div class="row" [ngClass]="{'active' : counter == 0}" (click)="Switch(0)">Bowen</div>
+  <div class="row" [ngClass]="{'active' : counter == 1}" (click)="Switch(1)">Rejuvance</div>
+  <div class="row">Zoga Face</div>
+  <div class="row">Facemodeling</div>
+  <div class="row">Kobido</div>
+  <div class="row">Terapia twarzy</div>
+  <div class="row">Refleksologia</div>
+  <div class="row">Refleksologia stóp</div>
+  <div class="row">Świecowanie uszu</div>
+  <div class="row">Totalna biologia</div>
+  <div class="mobile">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 0" (click)="Switch(0)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 1" (click)="Switch(1)">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card">
+  </div>
 </div>

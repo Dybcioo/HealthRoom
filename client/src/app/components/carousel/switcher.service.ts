@@ -1,15 +1,15 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Card } from './card';
+import { Card, Swipe } from './card';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SwitcherService {
-  activeCard = new EventEmitter<Card>();
+  activeCard = new EventEmitter<Swipe>();
 
   constructor() {}
 
-  switch(card: Card) {
-    this.activeCard.emit(card);
+  switch(swipe: Swipe) {
+    this.activeCard.emit(swipe);
   }
 }

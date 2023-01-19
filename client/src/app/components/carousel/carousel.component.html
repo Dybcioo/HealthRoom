@@ -1,11 +1,11 @@
 <div class="carousel">
-  <div class="content">
+  <div class="content" (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
     <div class="item">
       <app-carousel-item></app-carousel-item>
     </div>
     <div class="right-side">
       <div class="menu">
-        <app-carousel-menu></app-carousel-menu>
+        <app-carousel-menu [swipe]="swipeId"></app-carousel-menu>
       </div>
     </div>
   </div>
