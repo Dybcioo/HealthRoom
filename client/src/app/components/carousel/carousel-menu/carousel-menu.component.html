@@ -1,24 +1,22 @@
 <div class="container">
   <div class="row" [ngClass]="{'active' : counter == 0}" (click)="Switch(0)">Bowen</div>
   <div class="row" [ngClass]="{'active' : counter == 1}" (click)="Switch(1)">Rejuvance</div>
-  <div class="row">Zoga Face</div>
-  <div class="row">Facemodeling</div>
-  <div class="row">Kobido</div>
-  <div class="row">Terapia twarzy</div>
-  <div class="row">Refleksologia</div>
-  <div class="row">Refleksologia stóp</div>
-  <div class="row">Świecowanie uszu</div>
-  <div class="row">Totalna biologia</div>
+  <div class="row" [ngClass]="{'active' : counter == 2}" (click)="Switch(2)">Zoga Face</div>
+  <div class="row" [ngClass]="{'active' : counter == 3}" (click)="Switch(3)">Facemodeling</div>
+  <div class="row" [ngClass]="{'active' : counter == 4}" (click)="Switch(4)">Kobido</div>
+  <div class="row" [ngClass]="{'active' : counter == 5}" (click)="Switch(5)">Refleksologia</div>
+  <div class="row" [ngClass]="{'active' : counter == 6}" (click)="Switch(6)">Refleksologia stóp</div>
+  <div class="row" [ngClass]="{'active' : counter == 7}" (click)="Switch(7)">Świecowanie uszu</div>
+  <div class="row" [ngClass]="{'active' : counter == 8}" (click)="Switch(8)">Totalna biologia</div>
   <div class="mobile">
     <input class="row-mobile" type="radio" name="card" [checked]="counter == 0" (click)="Switch(0)">
     <input class="row-mobile" type="radio" name="card" [checked]="counter == 1" (click)="Switch(1)">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
-    <input class="row-mobile" type="radio" name="card">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 2" (click)="Switch(2)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 3" (click)="Switch(3)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 4" (click)="Switch(4)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 5" (click)="Switch(5)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 6" (click)="Switch(6)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 7" (click)="Switch(7)">
+    <input class="row-mobile" type="radio" name="card" [checked]="counter == 8" (click)="Switch(8)">
   </div>
 </div>

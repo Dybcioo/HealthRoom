@@ -13,7 +13,7 @@ export class CarouselMenuComponent implements OnInit {
     {
       id: 0,
       image:
-        'https://media.istockphoto.com/photos/beautiful-woman-enjoying-head-massage-in-spa-picture-id1168908791?k=20&m=1168908791&s=612x612&w=0&h=5WNkwhMr-W1BVyyYi64EtjBudDyZmfgj2SZEwk2Lyow=',
+        '../../../../assets/bowtech-vertical.jpeg',
       description: `Contrary to popular belief, Lorem Ipsum is not simply random text.
     It has roots in a piece of classical Latin literature from 45 BC,
     making it over 2000 years old. Richard McClintock,
@@ -25,67 +25,49 @@ export class CarouselMenuComponent implements OnInit {
     {
       id: 1,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/rejuvence-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 2,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/zoga-face-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 3,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/facemodeling-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 4,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/kobido-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 5,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/reflexology-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 6,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/reflexology-feet-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 7,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/ear-kandle-vertical.jpeg',
       description: `Elooo`,
     },
     {
-      id: 1,
+      id: 8,
       image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
-      description: `Elooo`,
-    },
-    {
-      id: 1,
-      image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
-      description: `Elooo`,
-    },
-    {
-      id: 1,
-      image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
-      description: `Elooo`,
-    },
-    {
-      id: 1,
-      image:
-        'https://media.istockphoto.com/photos/small-dog-of-pug-breed-in-her-physiotherapy-session-physiotherapy-for-picture-id1324266775?k=20&m=1324266775&s=612x612&w=0&h=xR9ygjFtl9D7FWvj0GUWhDjYr3uUTgePl16aRmPsLQA=',
+        '../../../../assets/total-biology-vertical.jpeg',
       description: `Elooo`,
     },
   ];

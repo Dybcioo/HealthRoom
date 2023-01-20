@@ -5,7 +5,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card, Swipe } from '../card';
 import { SwitcherService } from '../switcher.service';
 
