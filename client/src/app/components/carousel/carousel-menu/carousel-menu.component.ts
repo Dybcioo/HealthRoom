@@ -21,54 +21,72 @@ export class CarouselMenuComponent implements OnInit {
      looked up one of the more obscure Latin words, consectetur,
      from a Lorem Ipsum passage, and going through the cites of the word in
      classical literature, discovered the undoubtable source.`,
+     header: 'Bowen',
+     price: '200zł'
     },
     {
       id: 1,
       image:
         '../../../../assets/rejuvence-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 2,
       image:
         '../../../../assets/zoga-face-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 3,
       image:
         '../../../../assets/facemodeling-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 4,
       image:
         '../../../../assets/kobido-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 5,
       image:
         '../../../../assets/reflexology-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 6,
       image:
         '../../../../assets/reflexology-feet-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 7,
       image:
         '../../../../assets/ear-kandle-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
     {
       id: 8,
       image:
         '../../../../assets/total-biology-vertical.jpeg',
       description: `Elooo`,
+      header: 'Bowen',
+      price: '200zł'
     },
   ];
 

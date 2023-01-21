@@ -18,7 +18,7 @@
   border-radius: 3rem;
 
   height: 70vh;
-  background: linear-gradient(to left top, var(--main-bk-color-dark-3), var(--main-bk-color-light-1));
+  background: linear-gradient(to left top, var(--third-bk-color-dark-4), var(--third-bk-color-dark-1));
 }
 
 .item {

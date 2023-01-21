@@ -4,7 +4,14 @@
   (@photoState.done)="onDone($event)"
 >
   <img [src]="card.image" />
+  <h1 class="header">{{card.header}}</h1>
   <p class="descrition">
     {{ card.description }}
   </p>
+  <div class="info">
+    <div class="price">
+      {{card.price}}
+    </div>
+    <a href="#" class="btn">Zamów</a>
+  </div>
 </div>

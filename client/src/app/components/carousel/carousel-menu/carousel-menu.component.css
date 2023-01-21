@@ -5,11 +5,12 @@
 }
 
 .row {
-  color: var(--fourth-bk-color-light-9);
+  color: var(--fourth-bk-color-dark-9);
   font-size: 1.6vw;
   padding: 0.6rem 2rem;
-  border-left: 2px solid var(--third-bk-color-light-9);
+  border-left: 2px solid var(--third-bk-color-dark-9);
   flex-grow: 1;
+  font-weight: 500;
 }
 
 .mobile{
@@ -25,14 +26,14 @@
 
 .active:hover,
 .active:visited {
-  color: var(--fourth-bk-color-light-1);
+  color: var(--fourth-bk-color-light-9);
   font-weight: 600;
 }
 
 .active {
-  border-left: 2px solid var(--fourth-bk-color-light-1);
-  color: var(--fourth-bk-color-light-1);
-  font-weight: 500;
+  border-left: 2px solid var(--fourth-bk-color-light-9);
+  color: var(--fourth-bk-color-light-9);
+  font-weight: 700;
 }
 
 /* Media queries */
@@ -46,7 +47,6 @@
     display: none;
 
     flex-grow: 1;
-    color: var(--fourth-bk-color-light-9);
     font-size: 3.5vw;
     padding: 0;
     padding-top: 0.5rem;
