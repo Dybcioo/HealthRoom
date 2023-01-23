@@ -2,6 +2,7 @@
  position: absolute;
   z-index: 999;
   width: 100%;
+  font-style: italic;
 
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
 }
 
 .sticky{
+  font-style: italic;
   position: fixed;
   display: flex;
   justify-content: space-between;

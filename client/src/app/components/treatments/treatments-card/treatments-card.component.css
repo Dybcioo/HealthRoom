@@ -119,6 +119,8 @@
 }
 
 .btn {
+  font-style: italic;
+  letter-spacing: 0.1rem;
   text-decoration: none;
   font-size: 2.2vw;
   font-weight: 700;
